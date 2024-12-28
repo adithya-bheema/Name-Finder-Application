@@ -1,4 +1,4 @@
-# Realtime Object Detection using OpenCV
+# Name Finder Application by Realtime Object Detection using OpenCV
 
 ## Overview
 This project demonstrates real-time object detection using OpenCV, a pre-trained deep learning model, and a simple graphical user interface (GUI) built with Tkinter. The system captures video from a webcam and detects objects using a MobileNet SSD model. The detected objects are highlighted with bounding boxes, and their class labels and confidence scores are displayed.
