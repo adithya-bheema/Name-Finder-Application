@@ -1,78 +1,85 @@
-# Name Finder Application by Realtime Object Detection using OpenCV
+Name Finder Application
 
-## Overview
-This project demonstrates real-time object detection using OpenCV, a pre-trained deep learning model, and a simple graphical user interface (GUI) built with Tkinter. The system captures video from a webcam and detects objects using a MobileNet SSD model. The detected objects are highlighted with bounding boxes, and their class labels and confidence scores are displayed.
+Name Finder Application is a real-time object detection system that uses OpenCV and MobileNet SSD for identifying objects and displaying their names. This project includes a user-friendly web interface built with Flask and HTML, designed to help users learn the names of various objects in English.
 
-## Features
-- Real-time object detection using webcam feed.
-- Uses a MobileNet SSD model trained on the COCO dataset.
-- Displays bounding boxes, class names, and confidence levels for detected objects.
-- Simple GUI for starting and stopping object detection.
-- Key press handling to exit the application.
+Features
 
-## Requirements
+Real-Time Object Detection: Identifies objects in real-time using a MobileNet SSD model.
 
-- Python 3.x
-- OpenCV (`opencv-python`, `opencv-python-headless`)
-- Tkinter (Comes pre-installed with Python)
-- PIL (Pillow)
-- COCO class names file (`coco.names`)
-- Pre-trained model files:
-  - `ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt`
-  - `frozen_inference_graph.pb`
+Object Name Identification: Displays the names of recognized objects in English.
 
-## Installation
+Web Interface: A simple and interactive web interface for ease of use.
 
-1. Clone the repository or download the source files.
+Future Enhancements
 
-2. Install the required Python packages:
-   ```bash
-   pip install opencv-python opencv-python-headless pillow
-   ```
+Audio Feedback: Pronounce the names of detected objects.
 
-3. Ensure that you have the necessary model files:
-   - `coco.names`
-   - `ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt`
-   - `frozen_inference_graph.pb`
+Multi-Language Translation: Translate object names into multiple languages.
 
-4. Place the files in the same directory as the script.
+Improved Accuracy: Enhance the model to detect any object accurately.
 
-## How to Run
+File Structure
 
-1. Run the Python script:
-   ```bash
-   python main.py
-   ```
+coco.names: Contains 93 object names used by the model for detection.
 
-2. The application will open a window with two buttons: `Start Detection` and `Stop Detection`.
-   - Press `Start Detection` to begin object detection in real-time.
-   - Press `Stop Detection` to pause the detection process.
+mobilenet_ssd: The pre-trained MobileNet SSD model used for object detection.
 
-3. Press the `q` key on the keyboard to exit the application.
+main.py: The main Python script that handles object detection and integrates with the Flask web application.
 
-## Code Explanation
+frozenset: Used for efficient lookup and storage of object names.
 
-- **Video Capture**: The webcam is opened using OpenCV's `VideoCapture(0)`, where `0` is the default camera index.
-  
-- **Model Loading**: A pre-trained MobileNet SSD model is loaded using the configuration and weight files.
-  
-- **Tkinter GUI**: The application GUI is built using Tkinter. It contains two buttons for starting and stopping the object detection.
-  
-- **Object Detection**: The objects are detected in real-time from the video stream, and bounding boxes, class names, and confidence scores are drawn on the video frames.
+templates/: Contains the HTML files for the web interface:
 
-- **Image Display**: The frames are updated in the Tkinter window by converting the OpenCV image (BGR format) to RGB and using `ImageTk` to display it.
+index.html: The page where users interact with the object detection functionality.
 
-## Key Functionality
+start.html: The main landing page of the application.
 
-- **start_detection**: Begins the object detection process and continuously updates the video stream.
-- **stop_detection**: Stops the detection process but keeps the video feed running.
-- **on_key_press**: Listens for keypress events, particularly the `q` key, to quit the application.
+Installation
 
-## Future Improvements
+Clone this repository:
 
-- Allow users to choose between different object detection models.
-- Add functionality to save detected objects or results to a file.
-- Enhance the GUI for more user interactions and customization.
+git clone https://github.com/your-username/name-finder-application.git
+cd name-finder-application
 
-## License
-This project is licensed under the MIT License.
+Install the required dependencies:
+
+pip install -r requirements.txt
+
+Run the application:
+
+python main.py
+
+Open your browser and go to http://127.0.0.1:5000 to access the web interface.
+
+Usage
+
+Upload an image or use your webcam to detect objects in real-time.
+
+The application will display the detected objects and their names.
+
+Use the web interface to interact with the application.
+
+Prerequisites
+
+Python 3.7 or higher
+
+OpenCV
+
+Flask
+
+Screenshots
+
+(Add screenshots of your application in action here)
+
+Contributing
+
+Contributions are welcome! If you have ideas for improvement or new features, feel free to open an issue or submit a pull request.
+
+License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Contact
+
+For questions or suggestions, feel free to contact me at [adithyabheema369@gmail.com].
+
